@@ -1,0 +1,552 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+:root {
+    --peach: #E7816B;
+    --black: #1D1C1E;
+    --light-peach: #FFAD9B;
+    --dark-gray: #333136;
+    --light-grey: #F1F3F5;  
+}
+body {
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: 'Jost', sans-serif;
+}
+
+.wrapper {
+    margin: 0 auto;
+}  
+
+h1 {       
+    font-weight: 700;
+    font-size: 3em;
+    line-height: 1.2;
+}
+h2 {
+    font-weight: 500;
+    font-size: 3em;
+    letter-spacing: 2px;
+}
+h3 {
+    font-size: 1.25em;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 5.8em;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+.btn {
+    border: none;
+    padding: 1em 1.5em;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: 'Jost', sans-serif;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+}
+ .btn:hover {
+     color: #fff;
+     background-color: var(--light-peach);
+ } 
+.btn-dark {
+    background-color: var(--peach);
+    color: #fff;
+}
+.btn-dark:hover {
+    background-color: var(--light-peach);
+}
+
+/* nav styling */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 1em 1em 1em 0.5em;
+}
+ .logo-nav,
+ .logo-footer {
+     cursor: pointer;
+ }
+.logo {
+   width: 13em;
+}
+.hamburger,
+.nav-close {
+    background: transparent;
+    border: none;
+    font-size: 1.6em;
+    position: absolute;
+    top: 1.2em;
+    right: 0.5em;
+    cursor: pointer;
+    outline: none;
+    display: none;
+    padding: 0;
+}
+.nav-close.show {
+    display: block;
+    z-index: 2;
+}
+.nav-links {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.nav-links li {
+    flex: 1 0 auto;
+}
+.nav-links a {
+    color: var(--dark-gray);
+    margin: 2em;
+    text-transform: uppercase;
+    position: relative;
+}
+.nav-links a::after {
+    content: "";
+    background-color: var(--peach);
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    transition: transform 0.2s ease;
+    opacity: 0;
+}
+.nav-links a:hover::after {
+    transform: translateY(-15px);
+    opacity: 1;
+}
+/* header styling */
+.head {
+    background: var(--peach);
+    position: relative;
+    padding: 3em 1.5em;
+    text-align: center;
+    z-index: 3;
+    overflow: hidden;
+}
+ .head-background {
+    background-image: url(../assets/contact/mobile/bg-pattern-hero-contact-mobile.svg); 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+ } 
+ .head-para-wrapper {
+     color: #fff;
+ } 
+ form {
+    padding: 2em 0;
+    z-index: 2;
+    color: #fff;
+ }
+ textarea,
+ input[type=email],
+ input[type=text],
+ input[type=number] {
+     border: 0;
+     width: 100%;
+     border-bottom: 1px solid #fff;
+     outline: none;
+     background: transparent;
+     padding: 2.5em 0 1.5em 1em;
+ }
+ textarea {
+     padding-bottom: 3em;
+ }
+ textarea::placeholder,
+ input::placeholder {
+     font-size: 1em;
+     opacity: 0.6;
+     color: #fff;
+ }
+ .form-control {
+     position: relative;
+}
+.form button {
+   margin: 2em auto;
+   padding-right: 3em;
+   padding-left: 3em;
+   display: block;
+}
+.form-control small {
+    visibility: hidden;
+    position: absolute;
+    font-size: 0.8em;
+    left: 80%;
+    bottom: 25%;
+    z-index: 2;
+}
+.form-control.error textarea::placeholder,
+.form-control.error input::placeholder {
+    visibility: visible;
+    color: #fff;
+}
+.form-control.error small {
+    position: absolute;
+    font-weight: 400;
+    left: 72%;
+    color: #fff;
+    z-index: 1;
+    visibility: visible;
+}
+
+.form-control.success textarea,
+.form-control.success input {
+    border-color: #fff;
+    border-width: 3px;
+    visibility: visible;
+}
+
+/* main styling starts here */
+main {
+    padding: 5em 1em 5em 1em;
+}
+main h3 {
+    text-transform: uppercase;
+}
+.location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.img-canada,
+.img-australia,
+.img-uk {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgba(231, 129, 107, 0.1);
+    margin: 3em;
+}
+
+/* footer styling */
+footer {
+    background-color: var(--black);
+    padding: 5em 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-grey);
+}
+.footer-upper-deck {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 1.5em;
+}
+.logo-footer {
+    padding-bottom: 3em;
+}
+.logo-footer::after {
+    content: "";
+    border: 1px solid var(--dark-gray);
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 4em;
+}
+.footer-link ul {
+    padding: 0;
+}
+.footer-link li {
+    margin: 1em;
+}
+.footer-link a:hover {
+    opacity: 0.6;
+}
+.footer-link a{
+    color: var(--light-grey);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.9em;
+}
+.footer-lower-deck  {
+    margin: 0;
+}
+.office >p,
+.contact >p {
+    margin: 0;
+}
+.office,
+.contact {
+    padding-bottom: 3em;
+    color: #808080;
+    font-weight: 400;
+}
+.social-media-links img {
+    margin: 0.4em;
+    cursor: pointer;
+}
+.social-media-links img:hover {
+    opacity: 0.6;
+}
+
+/* 758px  */
+
+@media (max-width: 767px) {
+    .nav-links {
+        position: fixed;
+        flex-direction: column;
+        top: 4em;
+        background-color: var(--black);
+        width: 120%;
+        left: 0;
+        z-index: 4;
+        display: block;
+        font-size: 1.3em;
+        transform: translateX(120%);
+        transition: transform 0.2s ease;    
+    }   
+    .nav-links.show {
+        transform: translateX(0);
+    }
+    .nav-links a {
+        color: #fff;
+        letter-spacing: 0.1em;
+    }
+    .nav-links li {
+        margin: 1.5em 0;
+    }
+ 
+    .hamburger {
+        display: block;
+        z-index: 2;
+    }
+
+    h1 {
+        font-size: 2em;
+        font-weight: 500;
+        line-height: 1.3;
+    }
+    h2 {
+        font-weight: 500;
+        font-size: 1.8em;
+        letter-spacing: 2px;
+        line-height: 1.3;
+    }
+    h3 {
+        font-size: 1.3em;
+        font-weight: 500;
+        letter-spacing: 5px;
+        line-height: 1.3;
+    }
+}
+
+/* i pad screen size */
+@media (min-width: 768px) and (max-width: 1124px) {
+    .wrapper {
+        margin: 3em 2em;
+    }
+     /* nav styling */
+    nav {
+       padding: 1em 0 3em 0;
+    }
+    .nav-links a {
+        margin: 1em;
+    }
+     .logo-nav {
+         padding: 0;
+     }
+     /* header styling*/
+      .head {
+          border-radius: 1em;
+          text-align: left;
+          padding-right: 4em;
+          padding-left: 4em; 
+      }
+      .head-background {
+         background: url(../assets/contact/desktop/bg-pattern-hero-desktop.svg);
+         background-position: top right;
+         background-repeat: no-repeat;
+         z-index: -1;
+      }
+      .form button {
+          margin: 2em 82%;
+      }
+      .form-control.error small {
+        left: 85%;
+     }
+    
+     /* footer styling */
+     footer {
+         display: block;
+         padding: 3em 1em 5em 1em;
+         text-align: left;
+     }
+     .footer-upper-deck {
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         justify-content: space-around;
+         padding-bottom: 3em;
+     }
+     .logo-footer {
+         padding-bottom: 0;
+         width: 35%;
+     }
+     .footer-link {
+      display: flex;
+      flex-direction: row;
+     }
+     .footer-link ul {
+         display: flex;
+     }
+    .footer-lower-deck {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0;
+    }
+    .logo-footer::after {
+        top: 6em;
+    }
+    .office,
+    .contact {
+        padding: 0;
+    }
+    .social-media-links {
+        align-self: flex-end;
+    }
+    
+    }
+
+
+    /* desktop version */
+@media (min-width: 1125px) {
+    h1, h2 {
+        font-weight: 500;
+    }
+    .wrapper {
+        width: 69.5em; 
+    }
+    nav {
+        padding: 2em 0 3em 0;
+    }
+    nav li a:last-child {
+        margin-right: 0;
+    }
+    .logo {
+        width: 15em;
+    }
+    .logo-nav {
+        padding: 0;
+    }
+    .head {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        border-radius: 1em;
+    }
+    .head-background {
+        background: url(../assets/contact/desktop/bg-pattern-hero-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: -3em;
+        z-index: -1;
+     }
+    .head-para-wrapper {
+        width: 70%;
+        padding: 0 4em 1em 4em;
+    }
+    .form button {
+      margin:  0.5em 71%;
+    }
+    .form {
+        width: 80%;
+        padding: 0 4em 0 0;
+    }
+    form {
+        padding: 0;
+    }
+    input[type=text] {
+        padding-top: 0;
+    }
+
+    .form-control.error small {
+        left:82%;
+     }
+     .location {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding: 1em 0 5em 0;
+     }
+
+    footer {
+        display: block;
+        padding: 4em 1em 5em 1em;
+        text-align: left;
+    }
+    .footer-wrapper {
+        width: 69em;
+        margin: auto;
+    }
+    .footer-upper-deck {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 3em;
+    }
+    .logo-footer {
+        padding-bottom: 0;
+    }
+    .footer-link {
+     display: flex;
+     flex-direction: row;
+    }
+    .footer-link ul {
+        display: flex;
+    }
+   .footer-lower-deck {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding: 0;
+   }
+   .logo-footer::after {
+       top: 6em;
+   }
+   .office,
+   .contact {
+       padding: 0;
+   }
+   .social-media-links {
+       align-self: flex-end;
+   }
+     
+}
