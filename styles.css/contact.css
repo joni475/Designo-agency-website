@@ -87,6 +87,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     position: relative;
+    z-index: ;
     padding: 1em 1em 1em 0.5em;
 }
  .logo-nav,
@@ -149,7 +150,7 @@ nav {
     position: relative;
     padding: 3em 1.5em;
     text-align: center;
-    z-index: 3;
+    z-index: 2;
     overflow: hidden;
 }
  .head-background {
@@ -320,7 +321,7 @@ footer {
     .nav-links {
         position: fixed;
         flex-direction: column;
-        top: 4em;
+        top: 4.4em;
         background-color: var(--black);
         width: 120%;
         left: 0;

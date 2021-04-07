@@ -45,7 +45,7 @@ h3 {
     display: none;
     width: 100%;
     height: 100%;
-    top: 5.3em;
+    top: 5.8em;
     right: 0;
     left: 0;
     bottom: 0;
@@ -263,7 +263,6 @@ main {
 }
 
 /* footer styling */
-
 footer {
     background-color: var(--black);
     padding: 18em 1em 5em 1em;
@@ -335,7 +334,7 @@ footer {
     .nav-links {
         position: fixed;
         flex-direction: column;
-        top: 4em;
+        top: 4.4em;
         background-color: var(--black);
         width: 120%;
         left: 0;
