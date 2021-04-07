@@ -49,7 +49,7 @@ h3 {
     right: 0;
     left: 0;
     bottom: 0;
-    z-index: 3;
+    z-index: 4;
     background-color: rgba(0, 0, 0, 0.4);
 }
 ul {
@@ -111,7 +111,6 @@ nav {
 }
 .nav-close.show {
     display: block;
-    z-index: 2;
 }
 .nav-links {
   display: flex;
@@ -154,7 +153,7 @@ nav {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    position: relative;
+    position: relative; 
  }
 
  .head {
@@ -163,7 +162,6 @@ nav {
      justify-content: center;
      text-align:center;
      z-index: 3;
-     /* position: relative; */
  }
 .head-image-bubble {
      background-image: url(../assets/home/desktop/bg-pattern-hero-home.svg);
@@ -389,11 +387,11 @@ footer {
     .nav-links {
         position: fixed;
         flex-direction: column;
-        top: 4.4em;
+        top: 4.4em; 
         background-color: var(--black);
         width: 120%;
         left: 0;
-        z-index: 4;
+        z-index: 5;
         display: block;
         font-size: 1.3em;
         transform: translateX(120%);
