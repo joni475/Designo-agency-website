@@ -522,6 +522,7 @@ footer {
     }
     .wrapper {
         width: 69.5em; 
+        margin-top: 1.5em; 
     }
     nav {
         padding: 1em 0 1.5em 0;

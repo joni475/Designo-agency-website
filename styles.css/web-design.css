@@ -510,7 +510,8 @@ footer {
         font-weight: 500;
     }
     .wrapper {
-        width: 69.5em; 
+        width: 69.5em;
+        margin-top: 1.5em;  
     }
     nav {
         padding: 1em 0 1.5em 0;
