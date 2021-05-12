@@ -47,18 +47,24 @@ h3 {
     font-weight: 500;
     letter-spacing: 5px;
 }
-
 .overlay {
     position: fixed;
     display: none;
     width: 100%;
     height: 100%;
-    top: 5.8em;
+    top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    z-index: 3;
-    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    background: linear-gradient(rgba(0,0,0,0.1),
+                rgba(0,0,0,0.5));
+    transform: translate(120%);            
+    transition: 0.5s ease;
+}
+.overlay.show {
+    display: block;
+    transform: translate(0);
 }
 
 ul {
@@ -112,6 +118,9 @@ nav {
 .logo {
     width: 13em;
 }
+.logo-nav {
+    z-index: 4;
+}
 
 .hamburger,
 .nav-close {
@@ -129,7 +138,7 @@ nav {
 
 .nav-close.show {
     display: block;
-    z-index: 2;
+    z-index: 3;
 }
 
 .nav-links {
@@ -378,7 +387,7 @@ footer {
 
 @media (max-width: 767px) {
     .nav-links {
-        position: fixed;
+        position: absolute;
         flex-direction: column;
         top: 4.4em;
         background-color: var(--black);

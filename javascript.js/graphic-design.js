@@ -7,7 +7,7 @@ const overlay = document.querySelector(".overlay");
 
 hamburger.addEventListener("click",()=>{
   navLinks.classList.add("show");
-  overlay.style.display ="block";
+  overlay.classList.add("show");
   navClose.classList.add("show");
   hamburger.style.visibility ="hidden";
 
@@ -15,7 +15,7 @@ hamburger.addEventListener("click",()=>{
 navClose.addEventListener("click",()=>{
  navLinks.classList.remove("show");
  navClose.classList.remove("show");
- overlay.style.display = "none";
+ overlay.classList.remove("show");
  hamburger.style.visibility ="visible";
 });
 
