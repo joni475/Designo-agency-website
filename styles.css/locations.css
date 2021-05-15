@@ -28,7 +28,6 @@ body {
 
 .wrapper {
     margin: 0 auto;
-    overflow: hidden;
 }
 
 h1 {
@@ -336,7 +335,7 @@ footer {
         z-index: 4;
         display: block;
         font-size: 1.3em;
-        transform: translateX(120%);
+        transform: translateX(-120%);
         transition: transform 0.2s ease;
     }
 
